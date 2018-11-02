@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+
 	"github.com/zeebe-io/zeebe/clients/go"
 	"github.com/zeebe-io/zeebe/clients/go/pb"
 )
@@ -29,9 +30,9 @@ func main() {
 
 func roleToString(role pb.Partition_PartitionBrokerRole) string {
 	switch role {
-	case  pb.Partition_LEADER:
+	case pb.Partition_LEADER:
 		return "Leader"
-	case pb.Partition_FOLLOW:
+	case pb.Partition_FOLLOWER:
 		return "Follower"
 	default:
 		return "Unknown"
